@@ -1,0 +1,151 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to top left, #6a2f75, #b4282d);
+}
+
+.card {
+  width: 70vw;
+  height: 70vh;
+  box-shadow: 0 0 3rem black;
+  position: relative;
+  background: #b06e8a;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.player--active {
+  background: #d3a4b1;
+}
+
+.player--winner {
+  background: #222;
+}
+
+.player--winner .name {
+  color: #bf2e56;
+}
+
+.player__card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+.name {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.current {
+  border-radius: 0.7rem;
+  display: grid;
+  align-items: center;
+  justify-self: center;
+  text-align: center;
+  margin-top: 6rem;
+  font-size: medium;
+  background: #bf2e56;
+  height: 5rem;
+  width: 7rem;
+  color: #fff;
+}
+
+#current--0,
+#current--1 {
+  font-size: 1.8rem;
+}
+
+#score--0,
+#score--1 {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.btn {
+  width: 7rem;
+  height: 2rem;
+  font-size: small;
+  border-radius: 1rem;
+  border: 0;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background: linear-gradient(to top left, #6a2f75, #b4282d);
+  transform: translateY(0.1rem);
+  color: #fff;
+}
+
+.btn--container {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 5%;
+  left: 45%;
+}
+
+.dice--container > img {
+  display: flex;
+  width: 6rem;
+  height: 6rem;
+  background: #fff;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 0.7rem black;
+  border-radius: 1rem;
+  text-align: center;
+  color: #bf2e56;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .btn {
+    width: 5rem;
+    height: 1.5rem;
+    font-size: 0.5rem;
+  }
+
+  .btn--container {
+    left: 40%;
+  }
+
+  .dice--container {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .player__card {
+    font-size: 1rem;
+  }
+
+  .current {
+    font-size: x-small;
+    height: 2.5rem;
+    width: 4rem;
+    margin-top: 6.5rem;
+  }
+
+  #current--0,
+  #current--1 {
+    font-size: 1rem;
+  }
+}
